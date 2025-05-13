@@ -1,21 +1,74 @@
-<header class="header">
-    <div class="logo" data-i18n="EduPlatform">EduPlatform</div>
-    <nav class="header-nav">
-        <!-- ... existing code ... -->
-        <div class="profile-header">
-            <img src="../assets/user-placeholder.png" alt="User" class="avatar">
-            <span class="profile-name" data-i18n="Guest">Guest</span>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat - Educational Platform</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo" data-i18n="EduPlatform">EduPlatform</div>
+        <nav class="header-nav">
+            <a href="dashboard.html" data-i18n="Dashboard">Dashboard</a>
+            <a href="courses.html" data-i18n="Courses">Courses</a>
+            <a href="assignments.html" data-i18n="Assignments">Assignments</a>
+            <a href="quizzes.html" data-i18n="Quizzes">Quizzes</a>
+            <a href="chat.html" class="active" data-i18n="Live Chat">Live Chat</a>
+            <a href="helpdesk.html" data-i18n="Helpdesk">Helpdesk</a>
+            <div class="profile-header">
+                <img src="../assets/user-placeholder.png" alt="User" class="avatar">
+                <span class="profile-name" data-i18n="Guest">Guest</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="chat-container">
+            <div class="chat-sidebar">
+                <div class="chat-search">
+                    <input type="text" placeholder="Search users..." data-i18n-placeholder="Search users...">
+                </div>
+                <div class="chat-users">
+                    <!-- Users will be populated dynamically -->
+                </div>
+            </div>
+            <div class="chat-main">
+                <div class="chat-header">
+                    <h2 data-i18n="Live Chat">Live Chat</h2>
+                    <div class="online-status">
+                        <span class="status-dot"></span>
+                        <span data-i18n="Online">Online</span>
+                    </div>
+                </div>
+                <div class="chat-messages">
+                    <!-- Messages will be populated dynamically -->
+                </div>
+                <div class="chat-input">
+                    <textarea placeholder="Type your message..."
+                        data-i18n-placeholder="Type your message..."></textarea>
+                    <button class="btn-primary" data-i18n="Send">Send</button>
+                </div>
+            </div>
         </div>
-    </nav>
-</header>
-<main class="main-content">
-    <h1 data-i18n="Live Chat">Live Chat</h1>
-    <!-- Add more chat-related static text here with data-i18n as needed -->
-</main>
-<footer class="footer">
-    <span data-i18n="&copy; 2024 EduPlatform. All rights reserved.">&copy; 2024 EduPlatform. All rights reserved.</span>
-    <select id="lang-switcher">
-        <option value="en" data-i18n="English">English</option>
-        <option value="ar" data-i18n="العربية">العربية</option>
-    </select>
-</footer>
+    </main>
+
+    <footer class="footer">
+        <span data-i18n="&copy; 2024 EduPlatform. All rights reserved.">&copy; 2024 EduPlatform. All rights
+            reserved.</span>
+        <select id="lang-switcher">
+            <option value="en" data-i18n="English">English</option>
+            <option value="ar" data-i18n="العربية">العربية</option>
+        </select>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/chat.js"></script>
+</body>
+
+</html>

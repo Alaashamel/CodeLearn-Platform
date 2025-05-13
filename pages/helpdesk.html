@@ -4,25 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>helpdesk.html</title>
+    <title>Helpdesk - Educational Platform</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <header class="header">
         <div class="logo" data-i18n="EduPlatform">EduPlatform</div>
         <nav class="header-nav">
-            <!-- ... existing code ... -->
+            <a href="dashboard.html" data-i18n="Dashboard">Dashboard</a>
+            <a href="courses.html" data-i18n="Courses">Courses</a>
+            <a href="assignments.html" data-i18n="Assignments">Assignments</a>
+            <a href="quizzes.html" data-i18n="Quizzes">Quizzes</a>
+            <a href="chat.html" data-i18n="Live Chat">Live Chat</a>
+            <a href="helpdesk.html" class="active" data-i18n="Helpdesk">Helpdesk</a>
             <div class="profile-header">
                 <img src="../assets/user-placeholder.png" alt="User" class="avatar">
                 <span class="profile-name" data-i18n="Guest">Guest</span>
             </div>
         </nav>
     </header>
+
     <main class="main-content">
-        <h1 data-i18n="Helpdesk">Helpdesk</h1>
-        <!-- Add more helpdesk-related static text here with data-i18n as needed -->
+        <div class="helpdesk-container">
+            <div class="helpdesk-header">
+                <h1 data-i18n="Helpdesk">Helpdesk</h1>
+                <button class="btn-primary" id="new-ticket-btn" data-i18n="New Ticket">New Ticket</button>
+            </div>
+
+            <div class="helpdesk-content">
+                <div class="ticket-filters">
+                    <select id="ticket-status">
+                        <option value="all" data-i18n="All Tickets">All Tickets</option>
+                        <option value="open" data-i18n="Open">Open</option>
+                        <option value="in-progress" data-i18n="In Progress">In Progress</option>
+                        <option value="resolved" data-i18n="Resolved">Resolved</option>
+                    </select>
+                    <input type="text" id="ticket-search" placeholder="Search tickets..."
+                        data-i18n-placeholder="Search tickets...">
+                </div>
+
+                <div class="tickets-list">
+                    <!-- Tickets will be populated dynamically -->
+                </div>
+            </div>
+
+            <!-- New Ticket Modal -->
+            <div class="modal" id="new-ticket-modal">
+                <div class="modal-content">
+                    <h2 data-i18n="Create New Ticket">Create New Ticket</h2>
+                    <form id="new-ticket-form">
+                        <div class="form-group">
+                            <label data-i18n="Subject">Subject</label>
+                            <input type="text" required data-i18n-placeholder="Enter ticket subject">
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="Category">Category</label>
+                            <select required>
+                                <option value="technical" data-i18n="Technical Support">Technical Support</option>
+                                <option value="academic" data-i18n="Academic Support">Academic Support</option>
+                                <option value="billing" data-i18n="Billing Support">Billing Support</option>
+                                <option value="other" data-i18n="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="Description">Description</label>
+                            <textarea required data-i18n-placeholder="Describe your issue in detail"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" data-i18n="Cancel">Cancel</button>
+                            <button type="submit" class="btn-primary" data-i18n="Submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer class="footer">
         <span data-i18n="&copy; 2024 EduPlatform. All rights reserved.">&copy; 2024 EduPlatform. All rights
             reserved.</span>
@@ -31,7 +92,9 @@
             <option value="ar" data-i18n="العربية">العربية</option>
         </select>
     </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/helpdesk.js"></script>
 </body>
 
-<script src="../js/helpdesk.js"></script>
 </html>

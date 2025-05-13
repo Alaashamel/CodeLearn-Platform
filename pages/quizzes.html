@@ -1,21 +1,63 @@
-<header class="header">
-    <div class="logo" data-i18n="EduPlatform">EduPlatform</div>
-    <nav class="header-nav">
-        <!-- ... existing code ... -->
-        <div class="profile-header">
-            <img src="../assets/user-placeholder.png" alt="User" class="avatar">
-            <span class="profile-name" data-i18n="Guest">Guest</span>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes - Educational Platform</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo" data-i18n="EduPlatform">EduPlatform</div>
+        <nav class="header-nav">
+            <a href="dashboard.html" data-i18n="Dashboard">Dashboard</a>
+            <a href="courses.html" data-i18n="Courses">Courses</a>
+            <a href="assignments.html" data-i18n="Assignments">Assignments</a>
+            <a href="quizzes.html" class="active" data-i18n="Quizzes">Quizzes</a>
+            <a href="chat.html" data-i18n="Live Chat">Live Chat</a>
+            <a href="helpdesk.html" data-i18n="Helpdesk">Helpdesk</a>
+            <div class="profile-header">
+                <img src="../assets/user-placeholder.png" alt="User" class="avatar">
+                <span class="profile-name" data-i18n="Guest">Guest</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1 data-i18n="Available Quizzes">Available Quizzes</h1>
+
+        <div class="quizzes-container">
+            <div class="quiz-filters">
+                <input type="text" id="quiz-search" placeholder="Search quizzes..."
+                    data-i18n-placeholder="Search quizzes...">
+                <select id="quiz-filter">
+                    <option value="all" data-i18n="All Quizzes">All Quizzes</option>
+                    <option value="pending" data-i18n="Pending">Pending</option>
+                    <option value="completed" data-i18n="Completed">Completed</option>
+                </select>
+            </div>
+
+            <div class="quizzes-grid">
+                <!-- Quiz cards will be dynamically populated -->
+            </div>
         </div>
-    </nav>
-</header>
-<main class="main-content">
-    <h1 data-i18n="Quizzes">Quizzes</h1>
-    <!-- Add more quiz-related static text here with data-i18n as needed -->
-</main>
-<footer class="footer">
-    <span data-i18n="&copy; 2024 EduPlatform. All rights reserved.">&copy; 2024 EduPlatform. All rights reserved.</span>
-    <select id="lang-switcher">
-        <option value="en" data-i18n="English">English</option>
-        <option value="ar" data-i18n="العربية">العربية</option>
-    </select>
-</footer>
+    </main>
+
+    <footer class="footer">
+        <span data-i18n="&copy; 2024 EduPlatform. All rights reserved.">&copy; 2024 EduPlatform. All rights
+            reserved.</span>
+        <select id="lang-switcher">
+            <option value="en" data-i18n="English">English</option>
+            <option value="ar" data-i18n="العربية">العربية</option>
+        </select>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/quizzes.js"></script>
+</body>
+
+</html>
