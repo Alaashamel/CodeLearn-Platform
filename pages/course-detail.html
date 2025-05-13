@@ -1,0 +1,60 @@
+<header class="header">
+    <div class="logo" data-i18n="EduPlatform">EduPlatform</div>
+    <nav class="header-nav">
+        <!-- ... existing code ... -->
+        <div class="profile-header">
+            <img src="../assets/user-placeholder.png" alt="User" class="avatar">
+            <span class="profile-name" data-i18n="Guest">Guest</span>
+        </div>
+    </nav>
+</header>
+<main class="main-content">
+    <section id="course-detail-header" class="course-detail-header">
+        <!-- Course image, title, category, description will be rendered here -->
+    </section>
+    <section class="course-detail-body">
+        <div class="course-detail-main">
+            <h3 data-i18n="Syllabus">Syllabus</h3>
+            <ul id="course-syllabus"></ul>
+            <h3 data-i18n="Video Lecture">Video Lecture</h3>
+            <div class="course-video">
+                <video id="course-video" width="100%" height="240" controls poster="../assets/video-placeholder.png">
+                    <source src="" type="video/mp4">
+                    <span data-i18n="Your browser does not support the video tag.">Your browser does not support the
+                        video tag.</span>
+                </video>
+            </div>
+            <h3 data-i18n="Lecture Notes & Books">Lecture Notes & Books</h3>
+            <a id="course-notes" href="#" download class="btn-primary" data-i18n="Download Notes">Download Notes</a>
+            <h3 data-i18n="Assignments & Quizzes">Assignments & Quizzes</h3>
+            <ul id="course-assignments"></ul>
+        </div>
+        <aside class="course-detail-side">
+            <h3 data-i18n="Discussion">Discussion</h3>
+            <div id="course-discussion" class="course-discussion"></div>
+            <form id="discussion-form">
+                <input type="text" id="discussion-input" placeholder="Add a comment...">
+                <button type="submit" class="btn-primary" data-i18n="Post">Post</button>
+            </form>
+            <h3 data-i18n="Live Chat">Live Chat</h3>
+            <div id="live-chat" class="live-chat"></div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button type="submit" class="btn-primary" data-i18n="Send">Send</button>
+            </form>
+            <h3 data-i18n="AI Assistant">AI Assistant</h3>
+            <div id="ai-chat" class="ai-chat"></div>
+            <form id="ai-form">
+                <input type="text" id="ai-input" placeholder="Ask the AI...">
+                <button type="submit" class="btn-primary" data-i18n="Ask">Ask</button>
+            </form>
+        </aside>
+    </section>
+</main>
+<footer class="footer">
+    <span data-i18n="&copy; 2024 EduPlatform. All rights reserved.">&copy; 2024 EduPlatform. All rights reserved.</span>
+    <select id="lang-switcher">
+        <option value="en" data-i18n="English">English</option>
+        <option value="ar" data-i18n="العربية">العربية</option>
+    </select>
+</footer>

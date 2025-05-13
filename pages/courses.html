@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - EduPlatform</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo" data-i18n="EduPlatform">EduPlatform</div>
+        <nav class="header-nav">
+            <button id="theme-toggle" title="Toggle dark/light mode" onclick="toggleTheme()">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+            </button>
+            <button id="notifications-btn" title="Notifications">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+                <span class="badge">3</span>
+            </button>
+            <div class="profile-header">
+                <img src="../assets/user-placeholder.png" alt="User" class="avatar">
+                <span class="profile-name" data-i18n="Guest">Guest</span>
+            </div>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Courses</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="quizzes.html">Quizzes</a></li>
+            <li><a href="chat.html">Live Chat</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="helpdesk.html">Helpdesk</a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <section class="courses-search-bar">
+            <input type="text" id="course-search" placeholder="Search courses...">
+            <select id="course-category-filter">
+                <option value="" data-i18n="All Categories">All Categories</option>
+                <option value="Programming" data-i18n="Programming">Programming</option>
+                <option value="Math" data-i18n="Math">Math</option>
+                <option value="Science" data-i18n="Science">Science</option>
+                <option value="Languages" data-i18n="Languages">Languages</option>
+                <option value="Business" data-i18n="Business">Business</option>
+            </select>
+        </section>
+        <section class="courses-grid" id="courses-grid">
+            <!-- Course cards will be rendered here by JS -->
+        </section>
+    </main>
+    <footer class="footer">
+        <span data-i18n="&copy; 2024 EduPlatform. All rights reserved.">&copy; 2024 EduPlatform. All rights
+            reserved.</span>
+        <select id="lang-switcher">
+            <option value="en" data-i18n="English">English</option>
+            <option value="ar" data-i18n="العربية">العربية</option>
+        </select>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/courses.js"></script>
+</body>
+
+</html>

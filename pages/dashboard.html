@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EduPlatform</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo" data-i18n="EduPlatform">EduPlatform</div>
+        <nav class="header-nav">
+            <button id="theme-toggle" title="Toggle dark/light mode" onclick="toggleTheme()">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+            </button>
+            <button id="notifications-btn" title="Notifications">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+                <span class="badge">3</span>
+            </button>
+            <div class="profile-header">
+                <img src="../assets/user-placeholder.png" alt="User" class="avatar">
+                <span class="profile-name" data-i18n="Guest">Guest</span>
+            </div>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="quizzes.html">Quizzes</a></li>
+            <li><a href="chat.html">Live Chat</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="helpdesk.html">Helpdesk</a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <section class="dashboard-analytics">
+            <h2 data-i18n="Your Analytics">Your Analytics</h2>
+            <div class="analytics-cards">
+                <div class="analytics-card">
+                    <span class="analytics-label" data-i18n="Enrolled Courses">Enrolled Courses</span>
+                    <span class="analytics-value" id="analytics-courses">0</span>
+                </div>
+                <div class="analytics-card">
+                    <span class="analytics-label" data-i18n="Assignments Completed">Assignments Completed</span>
+                    <span class="analytics-value" id="analytics-assignments">0</span>
+                </div>
+                <div class="analytics-card">
+                    <span class="analytics-label" data-i18n="Quizzes Completed">Quizzes Completed</span>
+                    <span class="analytics-value" id="analytics-quizzes">0</span>
+                </div>
+                <div class="analytics-card">
+                    <span class="analytics-label" data-i18n="Course Progress">Course Progress</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner" id="analytics-progress" style="width:0%"></div>
+                    </div>
+                    <span class="analytics-value" id="analytics-progress-label">0%</span>
+                </div>
+            </div>
+            <div class="analytics-charts">
+                <div class="chart-container">
+                    <h3 data-i18n="Progress Over Time">Progress Over Time</h3>
+                    <canvas id="progressChart" width="350" height="180"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3 data-i18n="Completion Breakdown">Completion Breakdown</h3>
+                    <canvas id="completionChart" width="350" height="180"></canvas>
+                </div>
+            </div>
+        </section>
+        <section class="dashboard-welcome">
+            <div class="dashboard-user">
+                <img src="../assets/user-placeholder.png" alt="User" class="avatar large" id="dashboard-avatar">
+                <div>
+                    <h2 id="dashboard-username" data-i18n="Welcome, User!">Welcome, User!</h2>
+                    <p data-i18n="Here's your personalized learning dashboard.">Here's your personalized learning
+                        dashboard.</p>
+                </div>
+            </div>
+        </section>
+        <section class="dashboard-cards">
+            <div class="dashboard-card">
+                <h3 data-i18n="Courses">Courses</h3>
+                <p data-i18n="View and manage your enrolled courses.">View and manage your enrolled courses.</p>
+                <a href="courses.html" class="btn-primary" data-i18n="Go to Courses">Go to Courses</a>
+            </div>
+            <div class="dashboard-card">
+                <h3 data-i18n="Assignments">Assignments</h3>
+                <p data-i18n="Check your assignments and submissions.">Check your assignments and submissions.</p>
+                <a href="assignments.html" class="btn-primary" data-i18n="Go to Assignments">Go to Assignments</a>
+            </div>
+            <div class="dashboard-card">
+                <h3 data-i18n="Quizzes">Quizzes</h3>
+                <p data-i18n="Take quizzes and track your scores.">Take quizzes and track your scores.</p>
+                <a href="quizzes.html" class="btn-primary" data-i18n="Go to Quizzes">Go to Quizzes</a>
+            </div>
+            <div class="dashboard-card">
+                <h3 data-i18n="Progress">Progress</h3>
+                <p data-i18n="See your learning progress and achievements.">See your learning progress and achievements.
+                </p>
+                <a href="#" class="btn-primary" data-i18n="View Progress">View Progress</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <span data-i18n="&copy; 2024 EduPlatform. All rights reserved.">&copy; 2024 EduPlatform. All rights
+            reserved.</span>
+        <select id="lang-switcher">
+            <option value="en" data-i18n="English">English</option>
+            <option value="ar" data-i18n="العربية">العربية</option>
+        </select>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/dashboard-charts.js"></script>
+    <script>
+        // Personalize dashboard with user info
+        document.addEventListener('DOMContentLoaded', function () {
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (user) {
+                document.getElementById('dashboard-username').textContent = `Welcome, ${user.name}!`;
+                document.getElementById('dashboard-avatar').src = user.avatar || '../assets/user-placeholder.png';
+            }
+        });
+    </script>
+</body>
+
+</html>
