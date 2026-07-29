@@ -1,5 +1,8 @@
 # CodeLearn Platform
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Language](https://img.shields.io/badge/language-JavaScript-informational.svg) ![Last Commit](https://img.shields.io/github/last-commit/Alaashamel/CodeLearn-Platform)
+
+
 CodeLearn Platform — a JavaScript project by Alaashamel.
 
 ## ✨ Features
