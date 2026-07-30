@@ -3,8 +3,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Language](https://img.shields.io/badge/language-JavaScript-informational.svg) ![Last Commit](https://img.shields.io/github/last-commit/Alaashamel/CodeLearn-Platform)
 
 
-CodeLearn Platform — a JavaScript project by Alaashamel.
-
+Web-based platform for learning to code, built with HTML, CSS, and JavaScript and organized into lesson and practice pages. A front-end project structured for teaching programming concepts interactively.
 ## ✨ Features
 
 - Built primarily with **JavaScript**
